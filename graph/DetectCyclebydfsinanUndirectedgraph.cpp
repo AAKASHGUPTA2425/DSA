@@ -58,7 +58,7 @@ bool DetectCycle(int node, int parent, vector<bool> &visited, const vector<vecto
 }
 bool cycleDetected(int V, const vector<vector<int>> &adjList) {
     vector<bool> visited(V, false);
-
+    //this loop is for any type of graph either there is connected node or not connected node exist
     for (int i = 0; i < V; i++) {
         if (!visited[i]) {
             if (DetectCycle(i, -1, visited, adjList)) {
